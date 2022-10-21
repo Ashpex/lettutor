@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:lettutor/presentation/pages/welcom_screen/welcom_screen.dart';
+import 'package:lettutor/config/theme.dart';
+import 'package:lettutor/screens/authentication/launch_screen.dart';
+import 'package:flutter/services.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: AppTheme.mainColor2,
+    ));
     return MaterialApp(
+      title: 'Lettutor',
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
-          primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
-      home: WelcomeScreen(),
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
     );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return LaunchScreen();
   }
 }
