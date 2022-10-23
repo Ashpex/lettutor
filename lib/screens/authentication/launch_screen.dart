@@ -11,7 +11,7 @@ class LaunchScreen extends StatelessWidget {
     final Widget _background = SvgPicture.asset(_backgroundPath);
     final String _imagePath = 'assets/images/illustrator_image_01.svg';
     final Widget _image = SvgPicture.asset(_imagePath);
-    final String _logoPath = 'assets/icons/logo.svg';
+    final String _logoPath = 'assets/icons/logo_app.svg';
     final Widget _logo = SvgPicture.asset(
       _logoPath,
       height: 40,

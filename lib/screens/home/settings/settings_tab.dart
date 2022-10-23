@@ -77,6 +77,14 @@ class SettingsTab extends StatelessWidget {
                             builder: (context) => LanguageSettingScreen()));
                       },
                     ),
+                    SettingItem(
+                      title: 'Become a tutor',
+                      function: () {},
+                    ),
+                    SettingItem(
+                      title: 'History',
+                      function: () {},
+                    ),
                     Container(
                       padding: const EdgeInsets.only(
                           left: 30, right: 10, top: 10, bottom: 10),

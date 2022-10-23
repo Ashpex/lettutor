@@ -55,7 +55,7 @@ class HomeTab extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                Text('36 hours 12 minutes',
+                Text('99 hours 99 minutes',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 24,

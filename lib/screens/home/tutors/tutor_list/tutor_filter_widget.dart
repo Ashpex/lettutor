@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ant_design_flutter/ant_design_flutter.dart' as antd;
 
 class TutorFilterWidget extends StatefulWidget {
   @override
@@ -62,30 +63,40 @@ class _TutorFilterWidgetState extends State<TutorFilterWidget> {
                       Container(
                           padding:
                               EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Colors.white,
-                              border: Border.all(width: 1)),
-                          child: DropdownButton<String>(
-                            isExpanded: true,
-                            value: specialValue,
-                            icon: const Icon(Icons.arrow_drop_down),
-                            iconSize: 24,
-                            style: const TextStyle(color: Colors.black),
-                            underline: SizedBox(),
-                            onChanged: (String? newValue) {
-                              setState(() {
-                                specialValue = newValue!;
-                              });
-                            },
-                            items: specialities
-                                .map<DropdownMenuItem<String>>((String value) {
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(value),
-                              );
-                            }).toList(),
-                          ))
+                          // decoration: BoxDecoration(
+                          //     borderRadius: BorderRadius.circular(5),
+                          //     color: Colors.white,
+                          //     border: Border.all(width: 1)),
+                          // child: DropdownButton<String>(
+                          //   isExpanded: true,
+                          //   value: specialValue,
+                          //   icon: const Icon(Icons.arrow_drop_down),
+                          //   iconSize: 24,
+                          //   style: const TextStyle(color: Colors.black),
+                          //   underline: SizedBox(),
+                          //   onChanged: (String? newValue) {
+                          //     setState(() {
+                          //       specialValue = newValue!;
+                          //     });
+                          //   },
+                          //   items: specialities
+                          //       .map<DropdownMenuItem<String>>((String value) {
+                          //     return DropdownMenuItem<String>(
+                          //       value: value,
+                          //       child: Text(value),
+                          //     );
+                          //   }).toList(),
+                          // )
+                          child: antd.Select(
+                              size: antd.Size.large,
+                              controller: antd.SelectController()
+                                ..selected = [specialities[0]],
+                              children: specialities
+                                  .map<antd.Option<String>>(
+                                      (String value) => antd.Option<String>(
+                                            value: value,
+                                          ))
+                                  .toList()))
                     ]),
               ),
               SizedBox(
@@ -103,30 +114,40 @@ class _TutorFilterWidgetState extends State<TutorFilterWidget> {
                       Container(
                           padding:
                               EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Colors.white,
-                              border: Border.all(width: 1)),
-                          child: DropdownButton<String>(
-                            value: countryValue,
-                            // icon: SizedBox(),
-                            isExpanded: true,
-                            iconSize: 24,
-                            style: const TextStyle(color: Colors.black),
-                            underline: SizedBox(),
-                            onChanged: (String? newValue) {
-                              setState(() {
-                                countryValue = newValue!;
-                              });
-                            },
-                            items: countries
-                                .map<DropdownMenuItem<String>>((String value) {
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(value),
-                              );
-                            }).toList(),
-                          ))
+                          // decoration: BoxDecoration(
+                          //     borderRadius: BorderRadius.circular(5),
+                          //     color: Colors.white,
+                          //     border: Border.all(width: 1)),
+                          // child: DropdownButton<String>(
+                          //   value: countryValue,
+                          //   // icon: SizedBox(),
+                          //   isExpanded: true,
+                          //   iconSize: 24,
+                          //   style: const TextStyle(color: Colors.black),
+                          //   underline: SizedBox(),
+                          //   onChanged: (String? newValue) {
+                          //     setState(() {
+                          //       countryValue = newValue!;
+                          //     });
+                          //   },
+                          //   items: countries
+                          //       .map<DropdownMenuItem<String>>((String value) {
+                          //     return DropdownMenuItem<String>(
+                          //       value: value,
+                          //       child: Text(value),
+                          //     );
+                          //   }).toList(),
+                          // )
+                          child: antd.Select(
+                              size: antd.Size.large,
+                              controller: antd.SelectController()
+                                ..selected = [countries[0]],
+                              children: countries
+                                  .map<antd.Option<String>>(
+                                      (String value) => antd.Option<String>(
+                                            value: value,
+                                          ))
+                                  .toList()))
                     ]),
               ),
             ],

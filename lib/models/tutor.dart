@@ -23,13 +23,13 @@ class Tutor {
       description:
           'I am a teacher of English and a lecturer at a college in HCMC. I can help you to communicate better in English and be more confident to use English. For me, to learn is to you, so you will be given many chances to practice English...');
   static final data1 = Tutor(
-      name: 'Vy Bui',
-      countryCode: 'pt',
-      countryName: 'Portugal',
+      name: 'Thu Ha',
+      countryCode: 'vn',
+      countryName: 'Viet Nam',
       avatar: 'assets/images/cat.png',
       rating: 4.7,
       description:
-          'Hello there! I am an Industrial Engineer in the profession but chose to do online teaching because I love to meet different learners. I am an outgoing person and I have this passion for dealing with different people and seeing...');
+          'Hi! My name is Thu ha. You can call me Stevia. I come from Hanoi. I really like English and I want to help others study English. I have passion for innovative teaching methods, such as learning by playing or reversal of roles in the classroom. People say that I am a great listener and communicator in general, and it is easy for me to win the hearts of children. But I honestly believe that I still have to improve on many things, if I am to become a great teacher one day. Nice to meet you!!!');
   static final data2 = Tutor(
       name: 'Cat',
       countryCode: 'vn',
@@ -45,5 +45,5 @@ class Tutor {
       avatar: 'assets/images/cat.png',
       rating: 3.5,
       description:
-          'Hello there! I am an Industrial Engineer in the profession but chose to do online teaching because I love to meet different learners. I am an outgoing person and I have this passion for dealing with different people and seeing...');
+          'Hi! My name is Thu ha. You can call me Stevia. I come from Hanoi. I really like English and I want to help others study English. I have passion for innovative teaching methods, such as learning by playing or reversal of roles in the classroom. People say that I am a great listener and communicator in general, and it is easy for me to win the hearts of children. But I honestly believe that I still have to improve on many things, if I am to become a great teacher one day. Nice to meet you!!!');
 }

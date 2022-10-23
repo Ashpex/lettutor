@@ -4,7 +4,7 @@ import 'package:lettutor/config/theme.dart';
 
 final String _facebookIconPath = 'assets/images/facebook_icon.svg';
 final String _googleIconPath = 'assets/images/google_icon.svg';
-final String _logoPath = 'assets/icons/logo.svg';
+final String _logoPath = 'assets/icons/logo_app.svg';
 final String _chatIconPath = 'assets/icons/chat.svg';
 final String _favoriteIconPath = 'assets/icons/favorite.svg';
 final String _languageIconPath = 'assets/icons/language.svg';
@@ -13,7 +13,8 @@ final String _starBoxIconPath = 'assets/icons/star-box-multiple.svg';
 final String _suitcaseIconPath = 'assets/icons/suitcase.svg';
 
 class AppIcons {
-  static final Widget appLogo = SvgPicture.asset(_logoPath);
+  static final Widget appLogo =
+      SvgPicture.asset(_logoPath, width: 40, height: 30);
   static final Widget facebookIcon = SvgPicture.asset(_facebookIconPath);
   static final Widget googleIcon = SvgPicture.asset(_googleIconPath);
   static final Widget chatIcon =
