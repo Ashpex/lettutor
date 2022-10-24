@@ -135,7 +135,10 @@ class TutorDetail extends StatelessWidget {
                         function: () {},
                         title: 'Intro video'),
                     _buildFlatButton(
-                        icon: AppIcons.chatIcon,
+                        icon: Icon(
+                          Icons.chat_bubble_outline,
+                          size: 20,
+                        ),
                         function: () {},
                         title: 'Message'),
                     _buildFlatButton(
@@ -166,7 +169,10 @@ class TutorDetail extends StatelessWidget {
   }
 }
 
-_buildFlatButton({required Widget icon, required Function() function, required String title}) {
+_buildFlatButton(
+    {required Widget icon,
+    required Function() function,
+    required String title}) {
   final ButtonStyle buttonStyle = TextButton.styleFrom(
       primary: AppTheme.mainColor, backgroundColor: Colors.transparent);
   return TextButton(

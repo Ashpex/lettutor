@@ -34,8 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppTheme.backgroundColor,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: AppTheme.mainColor2,
-        elevation: 0,
+        backgroundColor: AppTheme.backgroundColor,
+        elevation: 3,
         title: AppIcons.appLogo,
       ),
       body: _widgetOptions.elementAt(_selectedIndex),
@@ -58,8 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Chats',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
         selectedItemColor: AppTheme.mainColor,

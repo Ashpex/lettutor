@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lettutor/config/theme.dart';
 import 'package:lettutor/config/utility.dart';
 import 'package:lettutor/screens/authentication/forget_password_screen.dart';
@@ -25,6 +26,15 @@ class LoginScreen extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(5),
         ),
+      ),
+    );
+
+    Widget loginPicture = Container(
+      height: 200,
+      width: 200,
+      child: SvgPicture.asset(
+        'assets/icons/login.svg',
+        fit: BoxFit.cover,
       ),
     );
 
@@ -77,6 +87,7 @@ class LoginScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: <Widget>[
+            loginPicture,
             EmailTextField(controller: _emailController),
             SizedBox(
               height: 10,

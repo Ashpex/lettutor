@@ -17,6 +17,18 @@ class LaunchScreen extends StatelessWidget {
       height: 40,
     );
 
+    final String _launchPicturePath = 'assets/images/image_login.png';
+    Widget launchPicture = Container(
+      height: 350,
+      width: 350,
+      margin: EdgeInsets.only(bottom: 50),
+      child: Image.asset(
+        _launchPicturePath,
+        fit: BoxFit.cover,
+      ),
+    );
+    // final Widget launchPicture = SvgPicture.asset(_launchPicturePath);
+
     final ButtonStyle raisedButtonStyle1 = ElevatedButton.styleFrom(
       onPrimary: Colors.white,
       primary: AppTheme.mainColor,
@@ -66,6 +78,7 @@ class LaunchScreen extends StatelessWidget {
             padding: EdgeInsets.all(20),
             child: Column(
               children: [
+                launchPicture,
                 ElevatedButton(
                   style: raisedButtonStyle1,
                   onPressed: () {

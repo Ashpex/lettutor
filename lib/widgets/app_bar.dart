@@ -18,12 +18,12 @@ class ApplicationAppBar extends StatelessWidget implements PreferredSizeWidget {
               Utility.hideKeyboard(context);
               Navigator.pop(context);
             }),
-        backgroundColor: AppTheme.mainColor2,
-        elevation: 0,
+        backgroundColor: AppTheme.backgroundColor,
+        elevation: 3,
         centerTitle: true,
         title: Text(
           title,
-          style: TextStyle(color: AppTheme.mainColor, fontSize: 18),
+          style: TextStyle(color: Colors.black, fontSize: 18),
         ));
   }
 

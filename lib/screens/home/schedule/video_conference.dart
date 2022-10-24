@@ -13,7 +13,7 @@ class VideoConference extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            color: Colors.blue[200],
+            color: Colors.black38,
           ),
           Center(
             child: Container(
@@ -23,7 +23,7 @@ class VideoConference extends StatelessWidget {
                     color: Colors.black.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(5)),
                 child: Center(
-                    child: Text('06:12:24',
+                    child: Text('23:59:59',
                         style: TextStyle(color: Colors.white, fontSize: 15)))),
           ),
         ],

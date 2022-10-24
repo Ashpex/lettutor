@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lettutor/models/user.dart';
+import 'package:lettutor/screens/authentication/launch_screen.dart';
+import 'package:lettutor/screens/home/schedule/history_screen.dart';
 import 'package:lettutor/screens/home/settings/language_setting_screen.dart';
 import 'package:lettutor/screens/home/settings/password_change_screen.dart';
 import 'package:lettutor/screens/home/settings/profile_edit_screen.dart';
@@ -83,7 +85,10 @@ class SettingsTab extends StatelessWidget {
                     ),
                     SettingItem(
                       title: 'History',
-                      function: () {},
+                      function: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => HistoryScreen()));
+                      },
                     ),
                     Container(
                       padding: const EdgeInsets.only(
@@ -113,7 +118,10 @@ class SettingsTab extends StatelessWidget {
                 ),
                 child: SubmitButton(
                     text: 'Logout',
-                    function: () {},
+                    function: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => LaunchScreen()));
+                    },
                     icon: Icon(Icons.exit_to_app)),
               )
             ],

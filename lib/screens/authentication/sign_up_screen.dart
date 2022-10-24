@@ -29,6 +29,15 @@ class SignUpScreen extends StatelessWidget {
       ),
     );
 
+    Widget signUpPicture = Container(
+      height: 200,
+      width: 200,
+      child: SvgPicture.asset(
+        'assets/icons/signup.svg',
+        fit: BoxFit.cover,
+      ),
+    );
+
     Widget facebookSignUpButton = ElevatedButton(
       style: raisedButtonStyle,
       onPressed: () {},
@@ -78,6 +87,7 @@ class SignUpScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: <Widget>[
+            signUpPicture,
             EmailTextField(
               controller: _emailController,
             ),

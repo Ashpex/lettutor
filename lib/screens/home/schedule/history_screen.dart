@@ -153,7 +153,7 @@ class HistoryItem extends StatelessWidget {
           _buildDataRow(
             title: 'Date',
             iconData: Icons.calendar_today,
-            content: '20:00 - 20:25, Monday 11/10/2021',
+            content: '00:00 - 23:59, Saturday 22/10/2022',
           ),
           SizedBox(
             height: 10,
@@ -161,7 +161,7 @@ class HistoryItem extends StatelessWidget {
           _buildDataRow(
             title: 'Learned time',
             iconData: Icons.timelapse,
-            content: '30 minutes 15 senconds',
+            content: '99 minutes 99 senconds',
           ),
           SizedBox(
             height: 10,
