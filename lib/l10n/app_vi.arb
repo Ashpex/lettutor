@@ -1,0 +1,94 @@
+{
+    "login": "Đăng nhập",
+    "signUp": "Đăng ký",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "forgetPassword": "Quên mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu ",
+    "orContinueWith": "Hoặc tiếp tục với",
+    "isRequired": "là bắt buộc",
+    "isInvalid": "không hợp lệ",
+    "emailOrPasswordIsInCorrect": "Email hoặc mật khẩu không chính xác",
+    "forgetPasswordContent": "Nhập email của bạn để lấy lại mật khẩu",
+    "sendResetLink": "Đặt lại mật khẩu",
+    "home": "Trang chủ",
+    "tutors": "Gia sư",
+    "tutor": "Gia sư",
+    "courses": "Khoá học",
+    "course": "Khoá học",
+    "settings": "Cài đặt",
+    "totalLessonTime": "Tổng thời gian học",
+    "hours": "giờ",
+    "minutes": "phút",
+    "history": "Lịch sử",
+    "upcommingLesson": "Buổi học sắp đến",
+    "goToMeeting": "Vào học ngay",
+    "videoConference": "Buổi học qua video call",
+    "searchByName": "Tìm kiếm theo tên",
+    "specialities": "Danh mục",
+    "countries": "Quốc gia",
+    "all": "Tất cả",
+    "profile": "Hồ sơ",
+    "calendar": "Lịch dạy",
+    "introVideo": "Giới thiệu",
+    "favorite": "Yêu thích",
+    "report": "Báo cáo",
+    "languages": "Ngôn ngữ",
+    "interests": "Sở thích",
+    "teachingExperience": "Kinh nghiệm dạy",
+    "bookAClass": "Đặt lịch học",
+    "bookingTime": "Thời gian",
+    "reviews": "Đánh giá",
+    "balance": "Số dư",
+    "price": "Giá",
+    "lessonsLeft": "buổi học còn lại",
+    "lesson": "buổi học",
+    "book": "Đặt",
+    "cancel": "Huỷ",
+    "levels": "Cấp độ",
+    "categories": "Danh mục",
+    "anyLevel": "Tất cả cấp độ",
+    "topics": "Chủ đề",
+    "courseDetail": "Chi tiết khoá học",
+    "overview": "Tổng quan",
+    "experienceLevel": "Trình độ yêu cầu",
+    "listTopics": "Danh sách chủ đề",
+    "accountSettings": "Cài đặt tài khoản",
+    "editProfile": "Hồ sơ cá nhân",
+    "changePassword": "Thay đổi mật khẩu",
+    "language": "Ngôn ngữ",
+    "darkMode": "Nền tối",
+    "logout": "Đăng xuất",
+    "courseLength": "Độ dài",
+    "currentPassword": "Mật khẩu hiện tại",
+    "newPassword": "Mật khẩu mới",
+    "save": "Lưu",
+    "name": "Tên" ,
+    "createAnAccount": "Tạo tài khoản mới",
+    "success": "Thành công",
+    "failed": "Không thành công",
+    "forgetPasswordSuccess": "Kiểm tra hộp thư đến trong email để đặt lại mật khẩu của bạn.",
+    "signUpSuccess": "Kiểm tra hộp thư đến trong email để xác thực tài khoản",
+    "close": "Đóng",
+    "loginNow": "Đăng nhập ngay"
+    ,"passwordNotMatch":"Mật khẩu không khớp"
+    ,"alreadyHaveAnAccount":"Bạn đã có tài khoản?"
+    ,"loginHere":"Đăng nhập"   
+    ,"meeting":"Buổi học"
+    ,"note":"Ghi chú"
+    ,"others":"Khác"
+    ,"welcomeToLettutor":"Chào mừng đến với Lettutor"
+    ,"remaining":"Còn lại"
+    ,"start":"Bắt đầu"
+    ,"duration":"Thời lượng"
+    ,"cancelMeeting":"Huỷ buổi học"
+    ,"cancelMeetingContent":"Bạn có muốn huỷ buổi học này không?"
+    ,"confirm":"Xác nhận"
+    ,"yes":"Có"
+    ,"no":"Không"
+    ,"startMeeting":"Bắt đầu ngay"
+    ,"meetingCancelled":"Huỷ buổi học thành công!!!"
+    ,"becomeATutor":"Trở giành gia sư"
+    ,"favoriteTutors":"Gia sư yêu thích"
+    ,"advancedSettings":"Cài đặt nâng cao"
+}
