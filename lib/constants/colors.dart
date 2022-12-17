@@ -5,15 +5,15 @@ class AppColors {
 
   static const customGrey = Color(0xff707B8A);
   static const Map<int, Color> primaryColor = const <int, Color>{
-    50: Color(0xFFFFF5E8),
-    100: Color(0xFFFFE6C6),
-    200: Color(0xFFFFD5A0),
-    300: Color(0xFFFFC479),
-    400: Color(0xFFFFB85D),
-    500: const Color(0xFFFFAB40),
-    600: Color(0xFFFFA43A),
-    700: Color(0xFFFF9A32),
-    800: Color(0xFFFF912A),
-    900: Color(0xFFFF801C),
+    50: Color.fromARGB(255, 232, 250, 255),
+    100: Color.fromARGB(255, 198, 243, 255),
+    200: Color.fromARGB(255, 160, 255, 250),
+    300: Color.fromARGB(255, 121, 255, 255),
+    400: Color.fromARGB(255, 93, 177, 255),
+    500: Color.fromARGB(255, 64, 207, 255),
+    600: Color.fromARGB(255, 58, 196, 255),
+    700: Color.fromARGB(255, 50, 170, 255),
+    800: Color.fromARGB(255, 42, 170, 255),
+    900: Color.fromARGB(255, 28, 172, 255),
   };
 }
