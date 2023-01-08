@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:lettutor_app/models/course/course.dart';
 import 'package:lettutor_app/models/tutor/tutor_feedback.dart';
 
@@ -21,6 +19,7 @@ class TutorBasicInfo {
   bool isPhoneActivated;
   String requireNote;
   int timezone;
+  double rating;
   String phoneAuth;
   bool isPhoneAuthActivated;
   String createdAt;
@@ -53,43 +52,38 @@ class TutorBasicInfo {
       this.updatedAt,
       this.deletedAt,
       this.feedbacks,
+      this.rating,
       this.courses});
 
   double calcAvgRating() {
-    int total = 0;
-    if (feedbacks == null) return 0;
-    for (var item in feedbacks) {
-      total += item.rating;
-    }
-    if (feedbacks != null && feedbacks.isEmpty) return 0;
-    return ((total / feedbacks.length) ~/ 1).toDouble();
+    return rating;
   }
 
   TutorBasicInfo.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    level = json['level'];
-    email = json['email'];
-    google = json['google'];
-    facebook = json['facebook'];
-    apple = json['apple'];
-    avatar = json['avatar'];
-    name = json['name'];
-    country = json['country'];
-    phone = json['phone'];
-    language = json['language'];
-    birthday = json['birthday'];
-    requestPassword = json['requestPassword'];
-    isActivated = json['isActivated'];
-    isPhoneActivated = json['isPhoneActivated'];
-    requireNote = json['requireNote'];
-    timezone = json['timezone'];
-    phoneAuth = json['phoneAuth'];
-    isPhoneAuthActivated = json['isPhoneAuthActivated'];
-    createdAt = json['createdAt'];
-    updatedAt = json['updatedAt'];
-    deletedAt = json['deletedAt'];
+    id = json['id'] ?? '';
+    level = json['level'] ?? '';
+    email = json['email'] ?? '';
+    google = json['google'] ?? '';
+    facebook = json['facebook'] ?? '';
+    apple = json['apple'] ?? '';
+    avatar = json['avatar'] ?? '';
+    name = json['name'] ?? '';
+    country = json['country'] ?? '';
+    phone = json['phone'] ?? '';
+    language = json['language'] ?? '';
+    birthday = json['birthday'] ?? '';
+    requestPassword = json['requestPassword'] ?? false;
+    isActivated = json['isActivated'] ?? false;
+    isPhoneActivated = json['isPhoneActivated'] ?? false;
+    requireNote = json['requireNote'] ?? '';
+    timezone = json['timezone'] ?? 0;
+    phoneAuth = json['phoneAuth'] ?? '';
+    isPhoneAuthActivated = json['isPhoneAuthActivated'] ?? false;
+    createdAt = json['createdAt'] ?? '';
+    updatedAt = json['updatedAt'] ?? '';
+    deletedAt = json['deletedAt'] ?? '';
+    rating = json['rating'] ?? 0;
     if (json['feedbacks'] != null) {
-      print("feedbacks: ${json['feedbacks']}");
       feedbacks = <TutorFeedback>[];
       json['feedbacks'].forEach((v) {
         feedbacks.add(new TutorFeedback.fromJson(v));

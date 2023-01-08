@@ -12,7 +12,7 @@ class TutorScheduleList {
 
   factory TutorScheduleList.fromJson(dynamic json) {
     List<ScheduleDetail> schedules = <ScheduleDetail>[];
-    (json['data'] as List).map((element) {
+    (json['scheduleOfTutor'] as List).map((element) {
       final tutorSchedule = TutorSchedule.fromJson(element);
 
       tutorSchedule.scheduleDetails.forEach((detail) {

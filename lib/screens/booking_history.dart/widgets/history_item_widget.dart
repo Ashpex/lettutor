@@ -59,6 +59,7 @@ class HistoryItem extends StatelessWidget {
                   Expanded(
                     child: TutorImageWidget(
                         tutorBasicInfo: tutorBasicInfo,
+                        rating: 0,
                         height: 50,
                         showRating: false),
                   ),

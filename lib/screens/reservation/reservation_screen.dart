@@ -120,6 +120,7 @@ class ReservationScreen extends StatelessWidget {
                       children: <Widget>[
                         TutorImageWidget(
                             tutorBasicInfo: state.tutor.tutorBasicInfo,
+                            rating: 0,
                             height: 100,
                             showRating: true),
                         SizedBox(

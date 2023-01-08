@@ -61,6 +61,7 @@ class BookingItemWidget extends StatelessWidget {
                       TutorImageWidget(
                           tutorBasicInfo: tutorBasicInfo,
                           height: 50,
+                          rating: 0,
                           showRating: false),
                       studentBooking.bookingInfo.studentRequest == null
                           ? SizedBox()

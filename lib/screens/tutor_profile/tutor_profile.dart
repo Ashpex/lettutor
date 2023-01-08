@@ -72,6 +72,7 @@ class TutorProfile extends StatelessWidget {
                         child: Column(children: [
                           TutorImageWidget(
                               tutorBasicInfo: state.tutor.tutorBasicInfo,
+                              rating: state.tutor.rating,
                               height: 100,
                               showRating: true),
                           SizedBox(
@@ -88,6 +89,7 @@ class TutorProfile extends StatelessWidget {
                             // text: AppLocalizations.of(context).calendar,
                             backgroundColor: Theme.of(context).primaryColor,
                             function: () {
+                              print(state.tutor.id);
                               Navigator.of(context).pushNamed(
                                   LettutorRoutes.tutorSchedule,
                                   arguments: state.tutor);

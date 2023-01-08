@@ -27,6 +27,7 @@ class FavoriteItemWidget extends StatelessWidget {
           children: <Widget>[
             TutorImageWidget(
                 tutorBasicInfo: tutor.tutorBasicInfo,
+                rating: 0,
                 height: 60,
                 showRating: false),
             SizedBox(

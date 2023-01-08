@@ -23,10 +23,7 @@ class TutorReviews extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline6,
               )),
           Column(
-            // children: tutorFeedbacks.map((e) => RatingComment(e)).toList(),
-            children: tutorFeedbacks != null
-                ? tutorFeedbacks.map((e) => RatingComment(e)).toList()
-                : [],
+            children: tutorFeedbacks.map((e) => RatingComment(e)).toList(),
           ),
           SizedBox(
             height: 30,
@@ -77,23 +74,24 @@ class RatingComment extends StatelessWidget {
                         width: 5,
                       ),
                       Container(
-                          width: 100,
-                          child: RatingBar.builder(
-                            initialRating: feedback.rating.toDouble(),
-                            ignoreGestures: true,
-                            itemSize: 15,
-                            direction: Axis.horizontal,
-                            allowHalfRating: true,
-                            itemCount: 5,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                            ),
-                            onRatingUpdate: (rating) {
-                              print(rating);
-                            },
-                          )),
+                        width: 100,
+                        child: RatingBar.builder(
+                          initialRating: feedback.rating.toDouble(),
+                          ignoreGestures: true,
+                          itemSize: 15,
+                          direction: Axis.horizontal,
+                          allowHalfRating: true,
+                          itemCount: 5,
+                          itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
+                          itemBuilder: (context, _) => Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          onRatingUpdate: (rating) {
+                            print(rating);
+                          },
+                        ),
+                      ),
                     ],
                   )
                 ],

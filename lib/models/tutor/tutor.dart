@@ -20,6 +20,7 @@ class Tutor {
   String createdAt;
   String updatedAt;
   bool isFavorite;
+  double rating;
   int price;
 
   Tutor(
@@ -42,31 +43,33 @@ class Tutor {
       this.updatedAt,
       this.tutorBasicInfo,
       this.isFavorite,
+      this.rating,
       this.price});
 
   Tutor.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    userId = json['userId'];
-    video = json['video'];
-    bio = json['bio'];
-    education = json['education'];
-    experience = json['experience'];
-    profession = json['profession'];
-    accent = json['accent'];
-    targetStudent = json['targetStudent'];
-    interests = json['interests'];
-    languages = json['languages'];
-    specialties = json['specialties'];
-    resume = json['resume'];
-    isActivated = json['isActivated'];
-    isNative = json['isNative'];
-    createdAt = json['createdAt'];
-    updatedAt = json['updatedAt'];
+    id = json['id'] ?? '';
+    userId = json['userId'] ?? '';
+    video = json['video'] ?? '';
+    bio = json['bio'] ?? '';
+    education = json['education'] ?? '';
+    experience = json['experience'] ?? '';
+    profession = json['profession'] ?? '';
+    accent = json['accent'] ?? '';
+    targetStudent = json['targetStudent'] ?? '';
+    interests = json['interests'] ?? '';
+    languages = json['languages'] ?? '';
+    specialties = json['specialties'] ?? '';
+    resume = json['resume'] ?? '';
+    isActivated = json['isActivated'] ?? false;
+    isNative = json['isNative'] ?? false;
+    createdAt = json['createdAt'] ?? '';
+    updatedAt = json['updatedAt'] ?? '';
     tutorBasicInfo = json['tutor'] != null
         ? new TutorBasicInfo.fromJson(json['tutor'])
         : null;
-    isFavorite = json['isFavorite'];
-    price = json['price'];
+    isFavorite = json['isFavorite'] ?? false;
+    rating = json['rating'] ?? 0;
+    price = json['price'] ?? 0;
   }
 
   Map<String, dynamic> toJson() {

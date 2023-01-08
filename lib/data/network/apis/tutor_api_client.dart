@@ -45,10 +45,24 @@ class TutorApiClient {
     return null;
   }
 
-  Future<TutorScheduleList> fetchTutorSchedules(String tutorId) async {
+  Future<TutorScheduleList> fetchTutorSchedules(
+    String tutorId,
+  ) async {
+    DateTime time = DateTime.now();
     final String endpoint = '/schedule';
-    final Response response =
-        await _restClient.post('$endpoint', body: {"tutorId": tutorId});
+    final Response response = await _restClient.get('$endpoint', params: {
+      'tutorId': tutorId,
+      'startTimestamp': time
+          .subtract(const Duration(days: 1))
+          .millisecondsSinceEpoch
+          .toString()
+          .substring(0, 13),
+      'endTimestamp': time
+          .add(const Duration(days: 5))
+          .millisecondsSinceEpoch
+          .toString()
+          .substring(0, 13),
+    });
     if (response.statusCode == 200) {
       return TutorScheduleList.fromJson(jsonDecode(response.body));
     }

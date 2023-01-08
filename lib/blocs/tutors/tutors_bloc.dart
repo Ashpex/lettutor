@@ -8,7 +8,7 @@ import 'package:lettutor_app/repositories/tutor_repository.dart';
 part 'tutors_event.dart';
 part 'tutors_state.dart';
 
-const _tutorPerPage = 5;
+const _tutorPerPage = 10;
 
 class TutorsBloc extends Bloc<TutorsEvent, TutorsState> {
   TutorFilter _tutorFilter = TutorFilter(specialities: [], keyword: '');

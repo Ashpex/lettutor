@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'package:lettutor_app/constants/config.dart';
+import 'package:lettutor_app/models/config/country.dart';
 import 'package:lettutor_app/models/tutor/tutor_basic_info.dart';
 
 import 'network_circle_avatar.dart';
@@ -14,11 +15,13 @@ class TutorImageWidget extends StatelessWidget {
     @required this.tutorBasicInfo,
     @required this.height,
     @required this.showRating,
+    @required this.rating,
   }) : super(key: key);
 
   final TutorBasicInfo tutorBasicInfo;
   final double height;
   final bool showRating;
+  final double rating;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class TutorImageWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           NetworkCircleAvatar(
-            url: tutorBasicInfo.avatar,
+            url: tutorBasicInfo.avatar ?? '',
             radius: height / 2,
           ),
           SizedBox(
@@ -66,33 +69,28 @@ class TutorImageWidget extends StatelessWidget {
                       'assets/national_flags/${tutorBasicInfo.country.toLowerCase()}.png',
                       height: 15,
                       width: 20,
+                      errorBuilder: (context, error, stackTrace) => SizedBox(),
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Text(
                       AppConfig.countries
-                          .firstWhere((element) =>
-                              element.code == tutorBasicInfo.country)
+                          .firstWhere(
+                            (element) => element.code == tutorBasicInfo.country,
+                            orElse: () => Country(name: '', code: ''),
+                          )
                           .name,
                       style: TextStyle(fontSize: 13 * height / 50),
                     )
                   ],
                 ),
                 showRating
-                    ? Row(
-                        children: [
-                          Text(
-                            '${tutorBasicInfo.calcAvgRating()}',
-                            style: TextStyle(color: Colors.amber),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Container(
+                    ? (rating != 0)
+                        ? Container(
                             width: 100,
                             child: RatingBar.builder(
-                              initialRating: tutorBasicInfo.calcAvgRating(),
+                              initialRating: rating,
                               ignoreGestures: true,
                               itemSize: 15,
                               direction: Axis.horizontal,
@@ -108,9 +106,30 @@ class TutorImageWidget extends StatelessWidget {
                                 print(rating);
                               },
                             ),
-                          ),
-                        ],
-                      )
+                          )
+                        : tutorBasicInfo.calcAvgRating() == 0
+                            ? Text('Chưa có đánh giá',
+                                style: TextStyle(color: Colors.grey))
+                            : Container(
+                                width: 100,
+                                child: RatingBar.builder(
+                                  initialRating: tutorBasicInfo.calcAvgRating(),
+                                  ignoreGestures: true,
+                                  itemSize: 15,
+                                  direction: Axis.horizontal,
+                                  allowHalfRating: true,
+                                  itemCount: 5,
+                                  itemPadding:
+                                      EdgeInsets.symmetric(horizontal: 1.0),
+                                  itemBuilder: (context, _) => Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  onRatingUpdate: (rating) {
+                                    print(rating);
+                                  },
+                                ),
+                              )
                     : SizedBox()
               ],
             ),

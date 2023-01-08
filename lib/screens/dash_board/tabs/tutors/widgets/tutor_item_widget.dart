@@ -34,6 +34,7 @@ class TutorItemWidget extends StatelessWidget {
           children: <Widget>[
             TutorImageWidget(
                 tutorBasicInfo: tutor.tutorBasicInfo,
+                rating: 0,
                 height: 60,
                 showRating: true),
             SizedBox(
@@ -62,7 +63,10 @@ class TutorItemWidget extends StatelessWidget {
                                 vertical: 5, horizontal: 10),
                             child: Text(
                                 Speciality.data
-                                    .firstWhere((element) => element.code == e)
+                                    .firstWhere(
+                                      (element) => element.code == e,
+                                      orElse: () => Speciality('', ''),
+                                    )
                                     .name,
                                 style: Theme.of(context)
                                     .textTheme

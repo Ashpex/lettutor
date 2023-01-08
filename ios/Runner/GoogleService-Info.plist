@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>500983664362-tdp311h53ee0nsc06g3iagrmjpqqec14.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.500983664362-tdp311h53ee0nsc06g3iagrmjpqqec14</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>500983664362-uo95e5cillg10jtgq6ic4gsj548r3tj3.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCYaA-lX9fFhzj54Q8Tl0G11LQCG3aL8UQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>500983664362</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.lettutor</string>
+	<key>PROJECT_ID</key>
+	<string>lettutor-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lettutor-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:500983664362:ios:5fb1a2e9bde98101b39193</string>
+</dict>
+</plist>

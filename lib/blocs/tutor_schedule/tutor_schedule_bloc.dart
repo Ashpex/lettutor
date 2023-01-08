@@ -22,7 +22,7 @@ class TutorScheduleBloc extends Bloc<TutorScheduleEvent, TutorScheduleState> {
     try {
       emit(TutorScheduleLoading());
       TutorScheduleList schedules =
-          await _tutorRepository.fetchTutorSchedules(_tutor.userId);
+          await _tutorRepository.fetchTutorSchedules(_tutor.tutorBasicInfo.id);
       emit(schedules == null
           ? TutorScheduleLoadFailureState()
           : TutorScheduleLoadedState(_tutor, schedules));
