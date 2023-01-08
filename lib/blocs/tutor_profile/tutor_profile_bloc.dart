@@ -38,9 +38,11 @@ class TutorProfileBloc extends Bloc<TutorProfileEvent, TutorProfileState> {
       TutorProfileFetchEvent event, Emitter<TutorProfileState> emit) async {
     try {
       final tutor = await _tutorRepository.getTutor(_tutorId);
-      if (tutor != null)
+      final reviews = await _tutorRepository.getReview(_tutorId);
+      if (tutor != null) {
+        tutor.tutorBasicInfo.feedbacks = reviews;
         emit(TutorProfileLoadedState(tutor));
-      else {
+      } else {
         emit(TutorProfileLoadFailedState());
       }
     } catch (err, trace) {

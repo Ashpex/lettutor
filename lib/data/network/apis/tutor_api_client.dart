@@ -4,6 +4,7 @@ import 'package:lettutor_app/data/network/rest_client.dart';
 import 'package:lettutor_app/models/schedule/tutor_schedule_list.dart';
 import 'package:lettutor_app/models/tutor/tutor.dart';
 import 'package:lettutor_app/models/tutor/tutor_basic_info.dart';
+import 'package:lettutor_app/models/tutor/tutor_feedback.dart';
 import 'package:lettutor_app/models/tutor/tutor_list.dart';
 
 class TutorApiClient {
@@ -71,5 +72,25 @@ class TutorApiClient {
 
   Future<double> getPriceOfSession() async {
     return 100;
+  }
+
+  Future<List<TutorFeedback>> getReview(
+      String id, int page, int perPage) async {
+    final String endpoint = '/feedback/v2/$id';
+    print('0');
+    final Response response = await _restClient.get('$endpoint', params: {
+      'page': '1',
+      'perPage': '15',
+    });
+    if (response.statusCode == 200) {
+      final body = jsonDecode(response.body);
+      final List<TutorFeedback> tutorFeedback =
+          ((body['data']['rows'] ?? []) as List)
+              .map((e) => TutorFeedback.fromJson(e))
+              .toList();
+
+      return tutorFeedback;
+    }
+    return null;
   }
 }

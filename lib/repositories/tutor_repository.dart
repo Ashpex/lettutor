@@ -3,6 +3,7 @@ import 'package:lettutor_app/data/network/apis/tutor_api_client.dart';
 import 'package:lettutor_app/models/filter/tutor_filter.dart';
 import 'package:lettutor_app/models/schedule/tutor_schedule_list.dart';
 import 'package:lettutor_app/models/tutor/tutor.dart';
+import 'package:lettutor_app/models/tutor/tutor_feedback.dart';
 import 'package:lettutor_app/models/tutor/tutor_list.dart';
 
 class TutorRepository {
@@ -20,6 +21,11 @@ class TutorRepository {
 
   Future<Tutor> getTutor(String id) async {
     return await tutorApiClient.getTutorById(id);
+  }
+
+  Future<List<TutorFeedback>> getReview(String id,
+      {int page = 1, int perPage = 15}) async {
+    return await tutorApiClient.getReview(id, page, perPage);
   }
 
   Future<TutorScheduleList> fetchTutorSchedules(String tutorId) async {
