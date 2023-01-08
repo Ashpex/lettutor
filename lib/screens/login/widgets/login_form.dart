@@ -215,7 +215,6 @@ Widget _buildGoogleButton(BuildContext context) {
           'https://www.googleapis.com/auth/userinfo.profile',
         ],
       );
-      // await _googleSignIn.signOut();
       try {
         GoogleSignInAccount googleSignInAccount = await _googleSignIn.signIn();
         String accessToken;
@@ -224,17 +223,6 @@ Widget _buildGoogleButton(BuildContext context) {
         });
         if (accessToken != null && accessToken.isNotEmpty) {
           context.read<LoginBloc>().add(LoginByGoogleToken(accessToken));
-          // final loginResult =
-          //     await context.read<UserProvider>().googleLogin(accessToken);
-          // if (loginResult['status'] == true) {
-          //   context.read<UserProvider>().setUser(loginResult['user']);
-          //   Navigator.of(context).pushNamed(LettutorRoutes.home);
-          // } else {
-          //   print(loginResult['message']);
-          //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          //       content: Text(
-          //           AppLocalizations.of(context).emailOrPasswordIsInCorrect)));
-          // }
         }
       } catch (error) {
         print(error);
